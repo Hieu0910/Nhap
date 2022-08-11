@@ -1,0 +1,685 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+ul{
+	list-style:none;
+}
+li{
+	list-style:none;
+}
+a{
+	 text-decoration:none;
+}
+.main{
+	width:100%;
+	min-height:100vh;
+	overflow:hidden;
+}
+/*------------------------Banner-----------------------*/
+.banner{
+	background-color: rgb(86, 7, 1);
+	height:44px;
+}
+.banner.img{
+	width:100%;
+}
+
+/*-----------------nav------*/
+nav{
+	background:black;
+}
+nav ul{
+	display:flex;/* các phần tử đã nằm trên một hàng*/
+	align-items: center;
+	justify-content:space-evenly;/*Gía trị này giúp cho các khoảng cách giữa các thành phần luôn bằng nhau, tuy nhiên phần tử đầu luôn nằm sát trái, phần tử cuối luôn nằm sát phải*/
+}
+nav ul li ,a{
+	color: white;
+	font-style:14px;
+}
+nav ul li:nth-child(2) a{
+ color: #FFE300;
+ font-size:15px;
+}
+
+nav ul li:nth-child(3) input{
+	height:30px;
+	width:auto;
+	border:none;
+	outline:none;
+	padding-left:6px;
+}
+nav ul li:nth-child(3) i{
+	font-size:20px;
+	line-height:30px;
+	color:yellow;
+	cursor:pointer;
+}
+nav ul li:nth-child(4) button{
+    height:30px;
+	padding:7px;
+	font-size:14px;
+	cursor:pointer;
+	background:black;
+	color:white;
+    border:1px solid rgb(78,68,68);
+    border-radius:5px;
+	transition: all 0.5s ease;	
+}
+nav ul li:nth-child(4) button i{
+	margin-right:6px;
+
+}
+nav ul li:nth-child(4) button:hover{
+ background-color:rgb(100,97,97);
+}
+nav ul li:nth-child(5)
+{
+	font-size:14px;
+	text-align:center;
+	
+}
+nav ul li:nth-child(5):hover a{
+ color:#FFE300;
+}
+nav ul li:nth-child(6)
+{
+	font-size:14px;
+}
+nav ul li:nth-child(6):hover a{
+ color:#FFE300;
+}
+/*------------------------menu-bar---------*/
+.menu-bar{
+	background-color:yellow;
+	
+}
+.menu-bar ul{
+	display:flex;
+	justify-content:space-between;
+}
+.menu-bar-content>ul>li {
+  padding:14px;
+  transition:all 0.3s ease;
+}
+.menu-bar ul li a{
+ color:black;
+ font-size: 15px;
+}
+.menu-bar ul li a i{
+	 font-size: 19px;
+}
+.menu-bar ul li:hover{
+
+	background-color:white;
+}
+.menu-bar-content>ul>li:nth-child(7){
+position:relative;
+}
+.menu-bar-content>ul>li:nth-child(7)::before{
+	position:absolute;
+	text-align:center;
+	content:" Giảm 5%";
+	display:block;
+	height:13px;
+	width:47px;
+	background-color:#F51212;
+	border-radius:5px;
+	right:-10px;
+	top:4px;
+	font-size:11px;
+	color:white;
+}
+.menu-bar-content>ul>li:nth-child(7)::after{
+	position:absolute;
+	content:"";
+	display:block;
+	height:4px;
+	width:4px;
+	background-color:#F51212;
+	right:30px;
+	top:15px;
+	transform:rotate(45deg);
+}
+/*-----------------------DIACHI-----------*/
+.Diachi{
+position:fixed;
+width:100vw;
+height:100vh;
+background-color: rgba(0,0,0,0.6);
+top:0;
+left:0;
+display:flex;
+align-items:center;
+justify-content: center;
+text-align:center;
+z-index:999;
+display:none;
+}
+.Diachi-content{
+	  width:500px;
+      height:450px;
+      background-color:#FFF;
+	  border-radius:7px;
+	  position:relative;
+}
+.Diachi-content form {
+	padding: 0 40px;
+}
+.Diachi-content h2{
+      padding: 12px 0;
+	  font-size:16px;
+	  border-bottom: 1px solid rgb(224,224,224);
+}
+.Diachi-content h2 span{
+ display:block;
+ position:absolute;
+ height:25px;
+ padding:0 7px;
+ border-bottom: 1px solid #333;
+ right:20px;
+ cursor:pointer;
+ top:15px;
+ border-radius:7px;
+}
+.Diachi-content form input,select{
+	display:block;
+	height:45px;
+	width:100%;
+	margin-top:20px;
+}
+.Diachi-content form button{
+	margin-top:20px;
+	height:45px;
+	width:80%;
+	background-color:#F97C10;
+	border-radius:7px;
+	border:none;
+	color:white;
+}
+/*------------------------menu---------*/
+.menu-bar-content ul li{
+position:relative; /* neo menu trong ul.li*/
+}
+.menu{
+position:absolute;
+background-color:white;
+width:300px;
+height:auto;
+left:0;
+top:100%;
+padding:12px;
+display:none;
+z-index:10;
+
+/* tim phan tu co relative de tu xac dinh vi tri de tach roi*/
+}
+.menu-bar-content ul li:hover .menu{
+display:block;
+}
+.menu ul{
+display:flex;
+flex-direction:column;
+}
+.menu ul li{
+	padding:6px 0;
+}
+.menu ul li:hover{
+	background:none;
+}
+.menu ul li:hover a{
+	color:blue;
+	
+}
+/*-----------------------Slider----------------*/
+.Slider{
+	height:250px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin:100px 0;
+}
+.QC1{
+	flex-basis:40%;
+	position:relative;
+	margin-left:100px;
+}
+.QC1::after{
+	content:'';
+	width:10px;
+	height:57%;
+	background: linear-gradient(315deg, #63d471 0%, #233329 74%);
+	position:absolute;
+	left:-40px;
+	top:8px;
+}
+.QC1 h1 {
+ font-size:54px;
+}
+.QC1 h3 {
+ font-size:30px;
+}
+.QC1 p {
+	margin:30px 0;
+ font-size:20px;
+}
+.QC1 h4 {
+	margin:30px 0;
+ font-size:21px;
+}
+.QC1 button{
+	width:140px;
+	border:0;
+	padding:12px 10px ;
+	outline:none;
+	color:#fff;
+	background: linear-gradient(315deg, #63d471 0%, #233329 74%);
+	border-radius:6px;
+	cursor:pointer;
+	transition:width 0.5s;
+}
+.QC1 button img{
+width:50px;
+display:none;
+}
+.QC1 button:hover img{
+	display:block;
+}
+.QC1 button:hover{
+	width:160px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.QC2{
+	position:relative;
+	flex-basis:60%;
+	display:flex;
+	align-items:center;
+}
+.QC2 img {
+	width:50%;
+}
+.colornen{
+	position:absolute;
+	right:0;
+	top:0;
+	background: linear-gradient(315deg, #63d471 0%, #233329 74%);
+	border-radius:20px 0 0 20px;
+	height:100%;
+	width:80%;
+	z-index:-1;
+}
+.addxemthem{
+text-align:center;
+color:#fff;
+cursor:pointer;
+}
+
+
+
+/*----------------------- Tu De SAN PHAM ---------------------*/
+.container-content{
+	width:100%;
+ margin-top:100px;
+margin-left:80px;
+}
+.container-content-title{
+display:flex;
+margin-bottom:20px;
+}
+.container-content-title ul{
+display:flex;
+margin-left:80px;
+}
+.container-content-title a{
+	color:black;
+}
+.container-content-title li{
+ padding:6px 12px;
+ border:1px solid #ddd;
+ border-radius:20px;
+ margin-left:12px;
+}
+.container-content-title ul li:hover a{
+	color:tomato;
+	transition:all 0.3s ease;
+}
+
+/*----------------------- NDSP ---------------------*/
+
+.container-content-NDC-Item{
+	padding:5px 5px 5px;
+}
+
+.container-content-DT{
+	width:90%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-evenly;
+	border:1px solid #ddd;
+}
+.DienThoai>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.DienThoai{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.DienThoai:hover li:nth-child(2){
+	color:blue;
+}
+.DienThoai:hover{
+border:1px solid black;
+}
+.container-content-NDC-Item-SP{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SP li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.container-content-NDC-Item-SP li img:first-child{
+	height:20px;
+}
+
+.container-content-NDC-Item-SP li:first-child{
+   width:100%;
+   background-color:#3097E0;
+   display:inline-block;
+   color:white;
+   font-size:10px;
+   align-items: center;
+   line-height:20px;
+   border-radius:9px;
+   margin:0px 0px 5px;
+   padding:0px 8px 0px 0px;
+}
+.container-content-NDC-Item-SP li:first-child img{
+width:20px;
+float:left;
+margin-right:6px;
+}
+.container-content-NDC-Item-SP li:last-child i{
+color:#FB6E2E;
+}
+.DienThoai:hover>img{
+	transform:translateY(-15px);
+}
+/*-----------------------DIEN THOAI2--------------------*/
+.DienThoai2>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.DienThoai2{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.DienThoai2:hover{
+border:1px solid black;
+}
+.DienThoai2:hover li:nth-child(1){
+	color:blue;
+}
+.DienThoai2:hover>img{
+	transform:translateY(-15px);
+}
+.container-content-NDC-Item2{
+	padding:12px;
+}
+.container-content-NDC-Item-SP2{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SP2 li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.container-content-NDC-Item-SP2 li:first-child{
+   display:inline-block;
+   color:black;
+   font-size:15px;
+   align-items: center;
+   line-height:20px;
+   border-radius:9px;
+}
+.container-content-NDC-Item-SP2 li:last-child i{
+color:#FB6E2E;
+}
+/*---------------------------------DIEN THOAI 3 ----------------------------*/
+.DienThoai3>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.DienThoai3{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.DienThoai3:hover li:nth-child(2){
+	color:blue;
+}
+.DienThoai3:hover{
+border:1px solid #867979;
+}
+.container-content-NDC-Item-SP3{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SP3 li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.container-content-NDC-Item-SP3 li:first-child{
+   width:100%;
+   background-color:#E91E63;
+   display:inline-block;
+   color:white;
+   font-size:12px;
+   line-height:20px;
+   border-radius:5px;
+   justify-content:space-between;
+}
+.DienThoai3:hover>img{
+	transform:translateY(-15px);
+}
+/*------------------Laptop-----------------*/
+.container-contentLT{
+	width:100%;
+ margin-top:100px;
+margin-left:80px;
+}
+.container-content-LT{
+	width:90%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-evenly;
+	border:1px solid #ddd;
+}
+.container-content-titleLT{
+display:flex;
+margin-bottom:20px;
+margin-top:20px;
+}
+.container-content-titleLT ul{
+display:flex;
+margin-left:80px;
+}
+.container-content-titleLT a{
+	color:black;
+	font-size:14px;
+}
+.container-content-titleLT li{
+ padding:6px 12px;
+ border:1px solid #ddd;
+ border-radius:20px;
+ margin-left:12px;
+}
+.container-content-titleLT ul li:hover a{
+	color:tomato;
+	transition:all 0.3s ease;
+}
+/*------------------Laptop 1-----------------*/
+
+.container-content-NDC-ItemLT{
+	padding:5px 5px 5px;
+}
+.LAPTOP>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.LAPTOP{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.LAPTOP:hover li:nth-child(2){
+	color:blue;
+}
+.LAPTOP:hover{
+border:1px solid black;
+}
+.container-content-NDC-Item-SPLT{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SPLT li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.container-content-NDC-Item-SPLT li img:first-child{
+	height:20px;
+}
+.container-content-NDC-Item-SPLT li:nth-child(3) a{
+text-decoration-line:line-through;
+color:black;
+}
+.container-content-NDC-Item-SPLT li:first-child{
+   width:100%;
+   background-color:red;
+   display:inline-block;
+   color:white;
+   font-size:10px;
+   align-items: center;
+   line-height:20px;
+   border-radius:9px;
+}
+.container-content-NDC-Item-SPLT li:first-child img{
+width:20px;
+float:left;
+margin-right:6px;
+}
+.container-content-NDC-Item-SPLT li:last-child i{
+color:#FB6E2E;
+}
+.LAPTOP:hover>img{
+	transform:translateY(-15px);
+}
+/*------------------Laptop 2-----------------*/
+
+.LAPTOP2>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.LAPTOP2{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.LAPTOP2:hover li:nth-child(2){
+	color:blue;
+}
+.LAPTOP2:hover{
+border:1px solid black;
+}
+.container-content-NDC-Item-SPLT2{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SPLT2 li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.container-content-NDC-Item-SPLT2 li img:first-child{
+	height:20px;
+}
+.container-content-NDC-Item-SPLT2 li:nth-child(3) a{
+text-decoration-line:line-through;
+color:black;
+}
+.container-content-NDC-Item-SPLT2 li:first-child{
+   width:100%;
+   background-color:red;
+   display:inline-block;
+   color:white;
+   font-size:10px;
+   align-items: center;
+   line-height:20px;
+   border-radius:9px;
+}
+.container-content-NDC-Item-SPLT2 li:first-child img{
+width:20px;
+float:left;
+margin-right:6px;
+}
+.container-content-NDC-Item-SPLT2 li:last-child i{
+color:#FB6E2E;
+}
+.LAPTOP:hover>img{
+	transform:translateY(-15px);
+}
+/*------------------Laptop 3-----------------*/
+.LAPTOP3>img{
+width:100%;
+transition:all 0.2s ease;
+}
+.LAPTOP3{
+width:19%;
+padding:48px 10px 10px;
+background-color:white;
+border-right:1px solid #ddd;
+cursor:pointer;
+}
+.LAPTOP3:hover li:nth-child(1){
+	color:blue;
+}
+.LAPTOP3:hover{
+border:1px solid #867979;
+}
+.container-content-NDC-Item-SPLT3{
+    padding-top:20px;
+}
+.container-content-NDC-Item-SPLT3 li{
+     margin-bottom:6px;
+	 cursor:pointer;
+}
+.LAPTOP3:hover>img{
+	transform:translateY(-15px);
+}
+/*------------footer-------------*/
+.Footer{
+	width:100%;
+	margin-top:150px;
+	background-color:rgb(27,175,231);
+     display:flex;
+	 justify-content:space-evenly;
+	 z-index:100;
+}
+.items{
+ display:flex;
+ justify-content:space-evenly;
+}
+.items li{
+font-size:30px;
+}
